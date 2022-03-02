@@ -262,6 +262,10 @@ body {
     }
 }
 
+.test {
+
+}
+
 @media screen and (orientation:landscape) {
     @media (max-width:1440px) {
         .glass-div {
