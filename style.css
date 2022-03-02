@@ -1,0 +1,327 @@
+﻿@font-face {
+    font-family: 'Cyberpunk';
+    src: url('font/Cyberpunk.ttf');
+}
+
+html {
+    margin: 0;
+    /*overflow: hidden;*/
+}
+
+body {
+    background: url('img/samurai2.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    -webkit-backdrop-filter: blur(5px) brightness(40%);
+    backdrop-filter: blur(5px) brightness(40%);
+    background-color: black !important;
+}
+
+    body::-webkit-scrollbar {
+        width: 0.7em;
+        background: rgba(255, 255, 255, 0.4);
+        opacity: 0.5;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.9);
+        outline: 0px solid slategrey;
+        border-radius: 5px;
+    }
+
+.window {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/*#nomadID {
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}*/
+
+.nomad {
+    background-image: url('img/Nomad_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nomad2 {
+    background-image: url('img/v/c2077-v-nomad-female.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid rgba(254, 16, 242, 0.3);
+}
+
+.street {
+    background-image: url('img/Street_kid_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.street2 {
+    background-image: url('img/v/c2077-v-street-kid.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid rgba(254, 16, 242, 0.3);
+}
+
+.corpo {
+    background-image: url('img/Corpo_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.corpo2 {
+    background-image: url('img/v/c2077-v-corporate-female.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid rgba(254, 16, 242, 0.3);
+}
+
+.glass-div p {
+    font-family: Cyberpunk;
+    font-size: 23px;
+    color: #fe10f2;
+    text-transform: uppercase;
+    transform: translateY(245px);
+    opacity: 0.5;
+    transition: 0.25s ease-in-out opacity;
+}
+
+.glass-div {
+    width: 330px;
+    height: 440px;
+    transition: 0.25s ease-in-out transform, 0.25s ease-in-out box-shadow, 0.25s ease-in-out background-color, 0.25s ease-in-out opacity;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+    .glass-div:hover {
+        transform: scale(1.04);
+        transition: 0.25s ease-in-out transform, 0.25s ease-in-out box-shadow, 0.25s ease-in-out background-color, 0.25s ease-in-out opacity;
+        color: rgba(0,0,0,0.8);
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .glass-div:hover > p {
+        opacity: 1;
+        transition: 0.25s ease-in-out opacity;
+    }
+
+.text {
+    color: #fe10f2;
+    opacity: 0.9;
+    font-family: Cyberpunk;
+    font-size: 25px;
+    font-weight: bold;
+    user-select: none;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translateY(-260px);
+}
+
+.confirm {
+    color: white;
+    opacity: 0.9;
+    font-family: Cyberpunk;
+    font-size: 17px;
+    font-weight: bold;
+    user-select: none;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translateY(256px);
+    background-color: #fe10f2;
+    padding: 5px 36px 5px 36px;
+    border: none;
+
+    /*display: none;*/
+
+    -webkit-box-shadow: 0px 2px 10px -2px black;
+    -moz-box-shadow: 0px 2px 10px -2px black;
+    box-shadow: 0px 2px 10px -2px black;
+}
+
+.audio-controls{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.audio-controls input{
+    border: none;
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
+
+.b.play {
+    width: 20px;
+    height: 12px;
+    border-style: solid;
+    border-width: 12px 0px 12px 20px;
+    border-color: transparent transparent transparent #fe10f2;
+    box-sizing: border-box;
+    opacity: 0.8;
+    position: absolute;
+}
+
+.b.pause {
+    width: 20px;
+    height: 25px;
+    border-style: double;
+    border-width: 0px 0px 0px 20px;
+    border-color: transparent transparent transparent #fe10f2;
+    box-sizing: border-box;
+    opacity: 0.8;
+    position: absolute;
+}
+
+@media screen and (orientation:portrait) {
+    @media (max-width:1440px) {
+        .glass-div {
+            width: 250px;
+            height: 370px;
+        }
+
+        body {
+            background-attachment: scroll;
+        }
+
+        .text {
+            transform: translate(-5px, -480px);
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width:1200px) {
+        .glass-div {
+            /*width: 170px;
+            height: 280px;*/
+        }
+    }
+
+    @media (max-width:1000px) {
+        .window {
+            flex-direction: column;
+        }
+    } 
+    
+    @media (max-width:768px) {
+        .window {
+            padding-top: 75px;
+            padding-bottom: 25px;
+            flex-direction: column;
+        }
+
+        .glass-div p {
+            transform: translateY(170px);
+            font-size: 16px;
+        }
+
+        .glass-div {
+            /*margin-bottom: 38px;
+            opacity: 0.85;*/
+            margin-bottom: 38px;
+        }
+
+        .text {
+            transform: translate(-5px, -640px);
+        }
+
+        .audio-controls {
+            display: none;
+        }
+    }
+}
+
+@media screen and (orientation:landscape) {
+    @media (max-width:1440px) {
+        .glass-div {
+            width: 250px;
+            height: 370px;
+        }
+
+        body {
+            background-attachment: scroll;
+        }
+
+        .text {
+            transform: translate(-5px, -215px);
+            font-size: 21px;
+        }
+
+        .glass-div p {
+            font-size: 19px;
+            transform: translateY(205px);
+        }
+    }
+
+    @media (max-width:1000px) {
+        .window {
+            /*padding-top: 75px;*/
+            padding-top: 50px;
+            padding-bottom: 25px;
+            /*flex-direction: column;*/
+        }
+
+        .glass-div {
+            margin-bottom: 30px;
+
+            width: 180px;
+            height: 300px;
+        }
+
+        .text {
+            transform: translate(-5px, -180px);
+            font-size: 19px;
+        }
+
+        .glass-div p {
+            font-size: 16px;
+            transform: translateY(170px);
+        }
+    }
+
+    @media (max-width:768px) {
+        .window {
+            flex-direction: column;
+        }
+
+        .text {
+            transform: translate(-5px, -525px);
+            font-size: 17px;
+        }
+
+        .audio-controls{
+            display: none;
+        }
+    }
+}

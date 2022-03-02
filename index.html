@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="..\css\bootstrap.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="..\js\bootstrap.js"></script>
+    <title>Stachu Jones</title>
+</head>
+<body>
+    <div class="container">
+
+        <audio id="myAudio" loop>
+            <source src="audio/Cyberpunk 2077-Main menu.mp3" type="audio/mpeg">
+        </audio>
+        <div class="audio-controls">
+            <input id="play" class="b play" onclick="playAudio()" type="button" />
+            <input id="pause" class="b pause" onclick="pauseAudio()" type="button" />
+        </div>
+        
+        <div class="window">
+            <div class="text">
+                <p>Choose your lifepath</p>
+            </div>
+            <div class="glass-div nomad" id="nomadID">
+                <div id="add-nomad-border-top"></div>
+                <div id="add-nomad-border-left"></div>
+                <p class="l-text1">Nomad</p>
+                <div id="add-nomad-border-bottom"></div>
+                <div id="add-nomad-border-right"></div>
+            </div>
+            <div class="glass-div street" id="streetID">
+                <div id="add-street-border-top"></div>
+                <div id="add-street-border-left"></div>
+                <p class="l-text2">Street Kid</p>
+                <div id="add-street-border-bottom"></div>
+                <div id="add-street-border-right"></div>
+            </div>
+            <div class="glass-div corpo" id="corpoID">
+                <div id="add-corpo-border-top"></div>
+                <div id="add-corpo-border-left"></div>
+                <p class="l-text3">Corpo</p>
+                <div id="add-corpo-border-bottom"></div>
+                <div id="add-corpo-border-right"></div>
+            </div>
+
+            <input type="button" class="confirm" value="Confirm" />
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("myAudio");
+        function playAudio() { x.play(); }
+        function pauseAudio() { x.pause(); } 
+    </script>
+</body>
+</html>
